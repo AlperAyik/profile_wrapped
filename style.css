@@ -1,3 +1,10 @@
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -5,4 +12,180 @@ html {
 body {
     margin: 0;
     padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+/* Animations */
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        filter: blur(10px)
+    }
+    100% {
+        filter: blur(0)
+    }
+}
+
+/* Header */
+header {
+    width: 100%;
+    border-bottom: 1px solid #D3D1C7;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 90%;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+
+.navbar_left h2{
+    font-weight: bold;
+    font-style: italic;
+    font-size: x-large;
+    display: flex;
+}
+
+.navbar_logo {
+    animation: bounce 0.5s ease-in infinite;
+}
+
+.navbar_right ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+}
+
+.navbar_right ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* hero */
+.section_hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D85A30;
+    color: white;
+    padding: 5rem;
+    gap: 10rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.section_hero h1 {
+    margin: 0;
+}
+
+.section_hero_left {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+
+.section_hero_right {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section_hero_right img{
+    width: 40%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* persoonlijk */
+.persoonlijk_section {
+    background-color: #F1EFE8;
+    color: white;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 10rem;
+}
+
+.persoonlijk_section div:nth-child(1){
+    color: #2C2C2A;
+}
+
+.persoonlijk_article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    width: 90%;
+    margin: 0 auto;
+}
+
+.persoonlijk_article img{
+    width: 20rem;
+    height: 20rem;
+}
+
+.persoonlijk_article div h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.persoonlijk_article div p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.persoonlijk_article div:nth-child(1) {
+    background-color: #D85A30;
+    color: white;
+}
+
+.persoonlijk_article div:nth-child(2) {
+    background-color: #FAC775;
+}
+
+.persoonlijk_article div:nth-child(3) {
+    background-color: #ED93B1;
+}
+
+
+/* Skills */
+.skills_section {
+    background-color: #FFFFFF;
+    color: black;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 10rem;
+}
+
+.article_skills_progress {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
 }

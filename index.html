@@ -4,42 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile_wrapped</title>
+    <link rel="icon" href="/Assets/Favicons/favicon-16x16.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar -->
     <header>    
-        <nav>   
-
+        <nav class="navbar">   
+            <div class="navbar_left">
+                <h2>
+                    <p class="navbar_logo">A</p>
+                    <p class="navbar_logo">l</p>
+                    <p class="navbar_logo">p</p>
+                    <p class="navbar_logo">e</p>
+                    <p class="navbar_logo">r</p>
+                    <p>.</p>
+                </h2>
+            </div>
+            <div class="navbar_right">
+                <ul>
+                    <li><a href="#persoonlijk">Persoonlijk</a></li>
+                    <li><a href="#hobbys">Hobbys</a></li>
+                    <li><a href="#gaming">Gaming</a></li>
+                    <li><a href="#muziek">Muziek</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     
     <main>
         <!-- Hero -->
-        <section>
-            <div>
-
+        <section class="section_hero">
+            <div class="section_hero_left">
+                <p>id="Intro"</p>
+                <h1>Hoi, ik ben [ Alper ]</h1>
+                <p>Dit is mijn profile wrapped hier kan je, <br> informatie vinden over mij als persoon. <br> Check hier onder mijn Skills</p>
+                <a href="#skills">Check mijn skills ></a>
             </div>
-            <div>
-
+            <div class="section_hero_right">
+                <img src="/Assets/Images/anita-austvika-OsfRsL4RhTk-unsplash.jpg" alt="Dit is een ....">
             </div>
         </section>
 
         <!-- Persoonlijk -->
-        <section>
-            <article>
-                <div></div>
-                <div></div>
-                <div></div>
+        <section class="persoonlijk_section" id="persoonlijk">
+            <div>
+                <h2>Persoonlijk</h2>
+                 <p>id="persoonlijk"</p>
+            </div>
+            <article class="persoonlijk_article">
+                <div>
+                    <img src="/Assets/Images/denis-gorbuleac-3jXJz1kgraw-unsplash.jpg" alt="">
+                    <h2>Koken</h2>
+                    <p>Ik hou enorm van koken <br> ik kook zo wat iedere dag</p>
+                </div>
+                <div>
+                    <img src="/Assets/Images/jorgen-hendriksen-1ct-QaXfOYQ-unsplash.jpg" alt="">
+                    <h2>Sporten</h2>
+                    <p>Ik heb 14 jaar gevoetbald <br> ik heb ook stage mogen lopen Az en Ajax</p>
+                </div>
+                <div>
+                    <img src="/Assets/Images/anita-austvika-OsfRsL4RhTk-unsplash.jpg" alt="">
+                    <h2>Muziek</h2>
+                    <p>Ik speel al een paar jaar de piano en gitaar <br> check mijn muziek section voor meer</p>
+                </div>
             </article>
         </section>
 
-        <!-- Hobbys -->
-        <section>
+        <!-- Skills -->
+        <section class="skills_section">
+            <article>
+                <div>
+                    <h2>Skills</h2>
+                    <p>id="skills"</p>
+                </div>
+                <div class="article_skills_progress">
+                    <div>
+                        <label for="">HTML/CSS</label>
+                        <progress class="html_css_progress" id="file" value="80" max="100"> 80% </progress>
+                    </div>
 
+                    <div>
+                        <label for="">JS/TS</label>
+                        <progress class="js_ts_progress" id="file" value="85" max="100"> 75% </progress>
+                    </div>
+
+                    <div>
+                        <label for="">Vue/Nuxt</label>
+                        <progress class="vue_nuxt_progress" id="file" value="70" max="100"> 70% </progress>
+                    </div>
+
+                    <div>
+                        <label for="">Cypress</label>
+                        <progress class="cypress_progress" id="file" value="55" max="100"> 55% </progress>
+                    </div>
+                </div>
+            </article>
+            <div>
+                <img src="/Assets/Images/modernshoot-FuZ8XXD252k-unsplash.jpg" alt="">
+            </div>
         </section>
 
-        <!-- Skills -->
+        <!-- Hobbys -->
         <section>
 
         </section>
@@ -56,5 +125,7 @@
             
         </section>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
