@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -39,7 +40,7 @@
         <!-- Hero -->
         <section class="section_hero">
             <div class="section_hero_left">
-                <p>id="Intro"</p>
+                <p class="idIntro">id="Intro"</p>
                 <h1>Hoi, ik ben [ Alper ]</h1>
                 <p>Dit is mijn profile wrapped hier kan je, <br> informatie vinden over mij als persoon. <br> Check hier onder mijn Skills</p>
                 <a href="#skills">Check mijn skills ></a>
@@ -53,69 +54,104 @@
         <section class="persoonlijk_section" id="persoonlijk">
             <div>
                 <h2>Persoonlijk</h2>
-                 <p>id="persoonlijk"</p>
+                 <p class="idPersoonlijk">id="persoonlijk"</p>
             </div>
             <article class="persoonlijk_article">
-                <div>
+                <a href="#">←</a>
+                <div class="cards">
                     <img src="/Assets/Images/denis-gorbuleac-3jXJz1kgraw-unsplash.jpg" alt="">
                     <h2>Koken</h2>
                     <p>Ik hou enorm van koken <br> ik kook zo wat iedere dag</p>
                 </div>
-                <div>
+                <div class="cards">
                     <img src="/Assets/Images/jorgen-hendriksen-1ct-QaXfOYQ-unsplash.jpg" alt="">
                     <h2>Sporten</h2>
                     <p>Ik heb 14 jaar gevoetbald <br> ik heb ook stage mogen lopen Az en Ajax</p>
                 </div>
-                <div>
+                <div class="cards">
                     <img src="/Assets/Images/anita-austvika-OsfRsL4RhTk-unsplash.jpg" alt="">
                     <h2>Muziek</h2>
                     <p>Ik speel al een paar jaar de piano en gitaar <br> check mijn muziek section voor meer</p>
                 </div>
+                <a href="#skills">→</a>
             </article>
         </section>
 
         <!-- Skills -->
-        <section class="skills_section">
+        <section class="skills_section" id="skills">
+            <a href="#gaming" class="skills_navbtns">↓</a>
             <article>
                 <div>
                     <h2>Skills</h2>
-                    <p>id="skills"</p>
+                    <p class="idSkills">id="skills"</p>
                 </div>
                 <div class="article_skills_progress">
                     <div>
-                        <label for="">HTML/CSS</label>
+                        <p>html / css</p>
                         <progress class="html_css_progress" id="file" value="80" max="100"> 80% </progress>
                     </div>
-
                     <div>
-                        <label for="">JS/TS</label>
-                        <progress class="js_ts_progress" id="file" value="85" max="100"> 75% </progress>
+                        <p>js / ts</p>
+                        <progress class="js_ts_progress" id="file" value="75" max="100"> 75% </progress>
                     </div>
-
                     <div>
-                        <label for="">Vue/Nuxt</label>
+                        <p>vue / nuxt</p>
                         <progress class="vue_nuxt_progress" id="file" value="70" max="100"> 70% </progress>
                     </div>
-
-                    <div>
-                        <label for="">Cypress</label>
-                        <progress class="cypress_progress" id="file" value="55" max="100"> 55% </progress>
-                    </div>
+                </div>
+                <div>
+                    <p>Hier boven zie je de skills waar ik veel mee werk <br> maar op mijn github kan je meer lezen over wat ik doe en kan.</p>
+                    <a href="https://github.com/AlperAyik">github</a>
                 </div>
             </article>
-            <div>
-                <img src="/Assets/Images/modernshoot-FuZ8XXD252k-unsplash.jpg" alt="">
+            <!-- <div class="msg_skills">
+                <p>Hou de foto minimaal 2s vast</p>
+            </div> -->
+            <div class="skills_left">
+                <img src="/Assets/Images/modernshoot-FuZ8XXD252k-unsplash.jpg" alt="Dit is een foto van een poster" class="skills_img">
             </div>
+            <a href="#persoonlijk" class="skills_navbtns">↑</a>
         </section>
 
-        <!-- Hobbys -->
-        <section>
-
+        <!-- Gaming -->
+        <section class="section_gaming" id="gaming">
+            <div>
+                <h2>Gaming</h2>
+                <p class="idSkills">id="gaming"</p>
+                <div>
+                    <img src="/Assets/Images/denis-gorbuleac-3jXJz1kgraw-unsplash.jpg" alt="Dit is een foto van een oud italiaans dorp huisje">
+                </div>
+            </div>
+            <article>
+                <div>
+                    <p>Favorite games</p>
+                    <ul>
+                        <li>The witcher 3 wild hunt — Een episch open-wereld RPG over monsterjager Geralt.</li>
+                        <li>Kingdom come deliverance — Een realistische, middeleeuwse RPG over wraak en overleving.</li>
+                        <li>Dying light — Een intense zombie-survivalgame met vloeiende parkour-actie.</li>
+                    </ul>
+                </div>
+            </article>
         </section>
 
         <!-- Muziek -->
-        <section>
-
+        <section class="section_muziek" id="muziek">
+            <div>
+                <h2>Muziek</h2>
+                <p>id="muziek"</p>
+                <img src="" alt="dit is een foto">
+            </div>
+            <article>
+                <div>
+                    <button>play - interstellar</button>
+                </div>
+                <div>
+                    <button>play - kara sevda</button>
+                </div>
+                <div>
+                    <button>play - last of us</button>
+                </div>
+            </article>
         </section>
     </main>
 

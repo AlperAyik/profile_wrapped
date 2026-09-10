@@ -10,9 +10,11 @@ html {
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     font-family: "Inter", sans-serif;
+    background-color: black;
+    font-weight: regular;
 }
 
 /* Animations */
@@ -28,11 +30,28 @@ body {
 
 @keyframes fadeIn {
     0% {
-        filter: blur(10px)
+        opacity: 0;
     }
     100% {
-        filter: blur(0)
+        opacity: 1;
     }
+}
+
+@keyframes fadeOut {
+    from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.idSkills,
+.idPersoonlijk,
+.idIntro {
+    opacity: 60%;
 }
 
 /* Header */
@@ -46,9 +65,11 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    background-color: #FFFFFF;
+    background-color: #F1EFE8;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .navbar_left h2{
@@ -70,9 +91,26 @@ header {
     list-style: none;
 }
 
+.navbar_right ul li {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s ease-in;
+}
+
+.navbar_right ul li:hover {
+    border-bottom: 2px solid #D85A30;
+}
+
 .navbar_right ul li a{
     text-decoration: none;
     color: black;
+}
+
+.navbar_left {
+    padding-left: 2rem;
+}
+
+.navbar_right {
+    padding-right: 2rem;
 }
 
 main {
@@ -99,9 +137,20 @@ main {
 }
 
 .section_hero_left {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding-top: 5rem;
+    padding-left: 5rem;
+}
+
+.section_hero_left a{
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: black;
+    width: 170px;
+    height: 46px;
+    background-color: #EF9F27;
 }
 
 .section_hero_right {
@@ -110,12 +159,10 @@ main {
 }
 
 .section_hero_right img{
-    width: 40%;
-    border-radius: 50%;
+    width: 50%;
+    border-radius: 20px;
     display: flex;
     align-items: center;
-
-    animation: fadeIn 0.5s ease-in;
 }
 
 /* persoonlijk */
@@ -124,9 +171,16 @@ main {
     color: white;
     padding-left: 5rem;
     padding-right: 5rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
     gap: 10rem;
+
+    animation: fadeIn 0.5s ease-in forwards;
+    animation-timeline: view();
+    animation-range: entry 5% cover 30%;
+
+    border-radius: 20px;
+    margin-top: 2rem;
 }
 
 .persoonlijk_section div:nth-child(1){
@@ -135,17 +189,18 @@ main {
 
 .persoonlijk_article {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
 
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 
 .persoonlijk_article img{
     width: 20rem;
     height: 20rem;
+    border-radius: 10px
 }
 
 .persoonlijk_article div h2 {
@@ -160,32 +215,198 @@ main {
     align-items: center;
 }
 
-.persoonlijk_article div:nth-child(1) {
+.cards:nth-child(2) {
     background-color: #D85A30;
     color: white;
+    padding: 10px;
+    border-radius: 20px;
+    transition: box-shadow 0.5s ease-in;
 }
 
-.persoonlijk_article div:nth-child(2) {
+.cards:nth-child(3) {
     background-color: #FAC775;
+    padding: 10px;
+    border-radius: 20px;
+    transition: box-shadow 0.5s ease-in;
 }
 
-.persoonlijk_article div:nth-child(3) {
+
+.cards:nth-child(4) {
     background-color: #ED93B1;
+    padding: 10px;
+    border-radius: 20px;
+    transition: box-shadow 0.5s ease-in;
+}
+
+.persoonlijk_article a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.persoonlijk_article div:hover {
+    box-shadow: 0 10px 10px 5px rgb(0,0,0,0.5)
 }
 
 
 /* Skills */
 .skills_section {
-    background-color: #FFFFFF;
+    background-color: #F1EFE8;
     color: black;
     padding-left: 5rem;
     padding-right: 5rem;
-    padding-top: 2rem;
+    padding-top: 5rem;
     padding-bottom: 2rem;
     gap: 10rem;
+    display: flex;
+    justify-content: space-between;
+
+    animation: fadeIn 0.5s ease-in forwards;
+    animation-timeline: view();
+    animation-range: entry 5% cover 30%;
+    
+    border-radius: 20px;
+    margin-top: 2rem;
 }
 
 .article_skills_progress {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+}
+
+.skills_img {
+    border-radius: 10px;
+    box-shadow: 30px 10px 30px 20px rgb(0,0,0, 0.5);
+    width: 15rem;
+    height: 25rem;
+    transform: rotate(30deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skills_img:hover {
+    transform: rotate(0deg);
+}
+
+.skills_section article div:nth-child(3) {
+    padding-top: 2rem;
+}
+
+.skills_section article div:nth-child(3) a{
+    text-decoration: underline;
+    color: black;
+}
+
+.msg_skills {
+    position: absolute;
+    margin-left: 35%;
+    opacity: 60%;
+}
+
+.skills_navbtns {
+    position: absolute;
+    margin-left: 43%;
+    text-decoration: none;
+    color: black;
+}
+
+.skills_navbtns:last-child{
+    padding-bottom: 5rem;
+}
+
+.skills_navbtns:first-child{
+    margin-top: 30rem;
+}
+
+progress {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 500px;
+    max-width: 600px;
+    height: 10px; 
+}
+
+progress::-webkit-progress-bar {
+    background-color: lightgray;
+}
+
+.html_css_progress::-webkit-progress-value {
+    background-color: #D85A30;
+}
+
+.js_ts_progress::-webkit-progress-value {
+    background-color: #EF9F27;
+}
+
+.vue_nuxt_progress::-webkit-progress-value {
+    background-color: #D4537E;
+}
+
+/* hobbys */
+.section_gaming {
+    background-color: #4A1B0C;
+    color: white;
+    padding: 2rem 5rem 2rem 5rem;
+    gap: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    animation: fadeIn 0.5s ease-in forwards;
+    animation-timeline: view();
+    animation-range: entry 5% cover 30%;
+    
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+
+.section_gaming img {
+    border-radius: 10px;
+    box-shadow: 30px 10px 30px 20px rgba(0, 0, 0, 0.5);
+    width: 20rem;
+    height: 25rem;
+    object-fit: cover;
+    display: block;
+}
+
+.section_gaming article {
+    background-color: #993C1D;
+    width: 90%;
+    height: 25rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.section_gaming article div {
+    width: 90%;
+    padding-top: 1rem;
+}
+
+.section_gaming article div p{
+    display: flex;
+    padding-left: 2.5rem;
+}
+
+.section_gaming article div ul li{
+    list-style: none;
+    padding-bottom: 2rem;
+    opacity: 60%;
+}
+
+/* muziek */
+.section_muziek {
+    background-color: #F1EFE8;
+    color: white;
+    padding: 2rem 5rem 2rem 5rem;
+    gap: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    animation: fadeIn 0.5s ease-in forwards;
+    animation-timeline: view();
+    animation-range: entry 5% cover 30%;
+    
+    border-radius: 20px;
+    margin-top: 2rem;
 }
