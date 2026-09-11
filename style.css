@@ -10,13 +10,14 @@ html {
 }
 
 body {
+    margin: 1rem;
+    padding: 1rem;
     font-family: "Inter", monospace;
     background-color: black;
-    font-weight: regular;
+    font-weight: 400;
 }
 
 /* Animations */
-
 @keyframes bounce {
     0%,
     100% {
@@ -50,17 +51,6 @@ body {
     }
 }
 
-@keyframes blurEffect {
-    0%,
-    100% {
-        filter: blur(0);
-    }
-
-    50% {
-        filter: blur(10px);
-    }
-}
-
 .idSkills,
 .idPersoonlijk,
 .idIntro {
@@ -68,7 +58,6 @@ body {
 }
 
 /* Header */
-
 header {
     width: 100%;
     border-bottom: 1px solid #D3D1C7;
@@ -178,8 +167,6 @@ main {
 .section_hero_right img {
     width: 50%;
     border-radius: 20px;
-    display: flex;
-    align-items: center;
 }
 
 /* Persoonlijk */
@@ -303,15 +290,8 @@ main {
 
 .skills_img:hover {
     transform: rotate(0deg);
-}
 
-.skills_section article div:nth-child(3) {
-    padding-top: 2rem;
-}
-
-.skills_section article div:nth-child(3) a {
-    text-decoration: underline;
-    color: black;
+    transition-delay: 2s
 }
 
 .msg_skills {
@@ -332,7 +312,7 @@ main {
 }
 
 .skills_navbtns:first-child {
-    margin-top: 30rem;
+    margin-top: 25rem;
 }
 
 progress {
@@ -370,9 +350,11 @@ progress::-webkit-progress-bar {
     justify-content: space-between;
     align-items: flex-end;
     opacity: 0;
+
     animation: fadeIn 0.5s ease-in forwards;
     animation-timeline: view();
     animation-range: entry 5% cover 30%;
+
     border-radius: 20px;
     margin-top: 2rem;
 }
@@ -384,6 +366,20 @@ progress::-webkit-progress-bar {
     height: 25rem;
     object-fit: cover;
     display: block;
+}
+
+.section_gaming a{
+    position: absolute;
+    text-decoration: none;
+    color: white;
+}
+
+.section_gaming_arrow_left {
+    padding-left: 28.5rem;
+}
+
+.section_gaming_arrow_right {
+    margin-left: 66rem;
 }
 
 .section_gaming article {
@@ -411,7 +407,6 @@ progress::-webkit-progress-bar {
 }
 
 /* Muziek */
-
 .section_muziek {
     background-color: #F1EFE8;
     color: black;
@@ -464,9 +459,6 @@ progress::-webkit-progress-bar {
     background-color: #bb7c1e;
 }
 
-.active {
-}
-
 /* Projecten */
 
 .projecten_section {
@@ -485,31 +477,28 @@ progress::-webkit-progress-bar {
 }
 
 .projecten_article {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 2rem;
     width: 100%;
     margin: 0 auto;
 }
 
 .projecten_article img {
-    width: 20rem;
+    width: 30rem;
     height: 20rem;
     border-radius: 10px;
 }
 
-.projecten_article div p {
+.projecten_article div {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    color: white;
+    color: black;
 }
 
 .cards_projecten a {
     text-decoration: underline;
-    color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -521,10 +510,6 @@ progress::-webkit-progress-bar {
     transition: box-shadow 0.5s ease-in;
     border-radius: 20px;
     height: 450px;
-}
-
-.projecten_article div:hover {
-    box-shadow: 0 10px 10px 5px rgb(0, 0, 0, 0.5);
 }
 
 /* footer */
@@ -541,16 +526,409 @@ progress::-webkit-progress-bar {
     display: flex;
     justify-content: space-between;
     width: 90%;
+    height: 90%;
     margin: 0 auto;
+}
+
+.footer_section_left:last-child {
+    display: flex;
+    align-items: flex-end;
 }
 
 .links_footer {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.links_footer p a{
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease-in;
+}
+
+.links_footer p a:hover {
+    border-bottom: 2px solid #F1EFE8;
 }
 
 .links_footer a {
     color: white;
     text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+
+    body {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .navbar_right ul {
+        gap: 1.5rem;
+    }
+
+    .navbar_left {
+        padding-left: 1rem;
+    }
+
+    .navbar_right {
+        padding-right: 1rem;
+    }
+
+    .section_hero {
+        padding: 3rem;
+        gap: 3rem;
+    }
+
+    .section_hero_left {
+        padding: 1.5rem;
+    }
+
+    .section_hero_right {
+        width: 100%;
+    }
+
+    .section_hero_right img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .persoonlijk_section {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .persoonlijk_article {
+        flex-wrap: wrap;
+    }
+
+    .persoonlijk_article img {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .skills_section {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        gap: 4rem;
+    }
+
+    progress {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .skills_img {
+        width: 12rem;
+        height: 20rem;
+    }
+
+    .msg_skills {
+        margin-left: 30%;
+    }
+
+    .skills_navbtns {
+        margin-left: 35%;
+    }
+
+    .section_gaming {
+        padding: 2rem 3rem;
+        gap: 3rem;
+    }
+
+    .section_gaming img {
+        width: 15rem;
+        height: 20rem;
+    }
+
+    .section_gaming article {
+        height: 20rem;
+    }
+
+    .section_gaming_arrow_left {
+        padding-left: 20rem;
+    }
+
+    .section_gaming_arrow_right {
+        margin-left: 45rem;
+    }
+
+    .section_muziek {
+        padding: 2rem 3rem;
+        gap: 3rem;
+    }
+
+    .muziek_left img {
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .section_muziek article {
+        height: 20rem;
+    }
+
+    .projecten_section {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .projecten_article img {
+        width: 22rem;
+        height: 16rem;
+    }
+
+    .cards_projecten {
+        height: auto;
+    }
+
+    .links_footer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+
+    body {
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    .navbar_left,
+    .navbar_right {
+        padding: 0;
+    }
+
+    .navbar_left h2 {
+        margin: 0;
+    }
+
+    .navbar_right ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .section_hero {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .section_hero_left {
+        padding: 1.5rem;
+        width: auto;
+    }
+
+    .section_hero_right {
+        width: 100%;
+    }
+
+    .section_hero_right img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .persoonlijk_section {
+        padding: 1rem;
+    }
+
+    .persoonlijk_article {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .persoonlijk_article img {
+        width: 14rem;
+        height: 14rem;
+    }
+
+    .persoonlijk_article div {
+        width: 100%;
+    }
+
+    .cards {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .skills_section {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 3rem;
+    }
+
+    .article_skills_progress {
+        width: 100%;
+    }
+
+    progress {
+        width: 100%;
+        max-width: none;
+    }
+
+    .skills_img {
+        width: 12rem;
+        height: 18rem;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .msg_skills,
+    .skills_navbtns {
+        position: static;
+        margin: 1rem 0;
+        display: block;
+        text-align: center;
+    }
+
+    .skills_navbtns:first-child {
+        margin-top: 1rem;
+    }
+
+    .section_gaming {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .section_gaming img {
+        width: 80%;
+        max-width: 20rem;
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+
+    .section_gaming article {
+        width: 100%;
+        height: auto;
+        min-height: 20rem;
+    }
+
+    .section_gaming article div {
+        width: auto;
+        padding: 1rem;
+    }
+
+    .section_gaming article div p {
+        padding-left: 0;
+    }
+
+    .section_gaming_arrow_left,
+    .section_gaming_arrow_right {
+        position: static;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .section_muziek {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .muziek_left img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .section_muziek article {
+        width: 100%;
+        height: auto;
+        min-height: 20rem;
+    }
+
+    .section_muziek article div {
+        width: 80%;
+        gap: 1.5rem;
+    }
+
+    .section_muziek article div button {
+        width: 100%;
+    }
+
+    .projecten_section {
+        padding: 1rem;
+    }
+
+    .projecten_article {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .projecten_article img {
+        width: 100%;
+        height: auto;
+    }
+
+    .projecten_article div {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cards_projecten {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .footer_section {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        padding: 1.5rem 0;
+        gap: 2rem;
+    }
+
+    .links_footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navbar_right ul {
+        gap: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .section_hero {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .section_hero_left h1 {
+        font-size: 1.7rem;
+    }
+
+    .persoonlijk_section,
+    .skills_section,
+    .section_gaming,
+    .section_muziek,
+    .projecten_section {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .skills_img {
+        width: 10rem;
+        height: 15rem;
+    }
+
+    .section_gaming img {
+        width: 70%;
+    }
+
+    .links_footer {
+        grid-template-columns: 1fr;
+    }
 }

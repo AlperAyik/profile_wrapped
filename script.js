@@ -12,25 +12,38 @@ let lastIndex = 0;
 let img_timer = 0;
 let rotation = 0;
 let stopped = false;
+
 const audios = ['/Assets/audio/Interstellar_alper.mp3', '/Assets/audio/KaraSevda_alper.mp3', '/Assets/audio/Last_of_us_alper.mp3']
 
 // muziek afspelen
 muziekBtns.forEach((btn, index) => {
-    let playing = false;
+    let playing = false
+    let savedTime = 0;
     btn.addEventListener('click', () => {
-        if(playing) {
-            audio.pause()
-            playing = !playing;
+        if (playing) {
+            audio.pause();
+            savedTime = audio.currentTime
+            playing = false;
             stopped = true;
         } else {
-            playing = !playing;
+            playing = true;
             stopped = false;
+            
             audio.src = audios[index];
+            if(savedTime > 0) {
+                audio.currentTime = savedTime
+            }
             audio.play();
+
             rotateVinly();
         }
-    })
-})
+    });
+});
+
+audio.addEventListener('ended', () => {
+    playing = false;
+    stopped = true;
+});
 
 function rotateVinly() {
     if(rotation < 359) {
@@ -42,23 +55,27 @@ function rotateVinly() {
     
     if(!stopped) {
         requestAnimationFrame(rotateVinly)
-    } 
+    }
+    
 }
 
 // Img bewegen
 skillsImg.addEventListener('mouseover', () => {
+    clearInterval(interval);
+    img_timer = 0;
+
     interval = setInterval(() => {
         if(img_timer < 2) {
             img_timer++;
         } else {
             clearInterval(interval);
-            img_timer = 0;
             skillsImg.style.transform = 'rotate(0deg)';
         }
     }, 1000)
 })
 
 skillsImg.addEventListener('mouseout', () => {
+    img_timer = 0;
     clearInterval(interval);
 })
 

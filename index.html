@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -28,6 +27,7 @@
             <div class="navbar_right">
                 <ul>
                     <li><a href="#persoonlijk">Persoonlijk</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#gaming">Gaming</a></li>
                     <li><a href="#muziek">Muziek</a></li>
                     <li><a href="#projecten">Projecten</a></li>
@@ -43,10 +43,10 @@
                 <p class="idIntro">id="Intro"</p>
                 <h1>Hoi, ik ben [ Alper ]</h1>
                 <p>Dit is mijn profile wrapped hier kan je, <br> informatie vinden over mij als persoon. <br> Check hier onder mijn Skills</p>
-                <a href="#skills">Check mijn skills ></a>
+                <a href="#persoonlijk">Persoonlijk →</a>
             </div>
             <div class="section_hero_right">
-                <img src="/Assets/Images/anita-austvika-OsfRsL4RhTk-unsplash.jpg" alt="Dit is een ....">
+                <img src="./Assets/Images/anita-austvika-OsfRsL4RhTk-unsplash.jpg" alt="Dit is een ....">
             </div>
         </section>
 
@@ -59,17 +59,17 @@
             <article class="persoonlijk_article">
                 <a href="#">←</a>
                 <div class="cards">
-                    <img src="/Assets/Images/denis-gorbuleac-3jXJz1kgraw-unsplash.jpg" alt="">
+                    <img src="./Assets/Images/denis-gorbuleac-3jXJz1kgraw-unsplash.jpg" alt="">
                     <h2>Koken</h2>
                     <p>Ik hou enorm van koken <br> ik kook zo wat iedere dag</p>
                 </div>
                 <div class="cards">
-                    <img src="/Assets/Images/jorgen-hendriksen-1ct-QaXfOYQ-unsplash.jpg" alt="">
+                    <img src="./Assets/Images/jorgen-hendriksen-1ct-QaXfOYQ-unsplash.jpg" alt="">
                     <h2>Sporten</h2>
                     <p>Ik heb 14 jaar gevoetbald <br> ik heb ook stage mogen lopen Az en Ajax</p>
                 </div>
                 <div class="cards">
-                    <img src="/Assets/Images/anita-austvika-OsfRsL4RhTk-unsplash.jpg" alt="">
+                    <img src="./Assets/Images/anita-austvika-OsfRsL4RhTk-unsplash.jpg" alt="">
                     <h2>Muziek</h2>
                     <p>Ik speel al een paar jaar de piano en gitaar <br> check mijn muziek section voor meer</p>
                 </div>
@@ -95,7 +95,7 @@
                         <p>js / ts</p>
                         <progress class="js_ts_progress" id="file" value="75" max="100"> 75% </progress>
                     </div>
-                    
+
                     <div>
                         <p>vue / nuxt</p>
                         <progress class="vue_nuxt_progress" id="file" value="70" max="100"> 70% </progress>
@@ -103,25 +103,23 @@
                 </div>
                 <div>
                     <p>Hier boven zie je de skills waar ik veel mee werk <br> maar op mijn github kan je meer lezen over wat ik doe en kan.</p>
-                    <a href="https://github.com/AlperAyik">github</a>
+                    <a href="#projecten">github</a>
                 </div>
             </article>
-            <!-- <div class="msg_skills">
-                <p>Hou de foto minimaal 2s vast</p>
-            </div> -->
             <div class="skills_left">
-                <img src="/Assets/Images/modernshoot-FuZ8XXD252k-unsplash.jpg" alt="Dit is een foto van een poster" class="skills_img">
+                <img src="./Assets/Images/modernshoot-FuZ8XXD252k-unsplash.jpg" alt="Dit is een foto van een poster" class="skills_img">
             </div>
             <a href="#persoonlijk" class="skills_navbtns">↑</a>
         </section>
 
         <!-- Gaming -->
         <section class="section_gaming" id="gaming">
+            <a href="#skills" class="section_gaming_arrow_left">←</a>
             <div>
                 <h2>Gaming</h2>
                 <p class="idSkills">id="gaming"</p>
                 <div>
-                    <img src="/Assets/Images/denis-gorbuleac-3jXJz1kgraw-unsplash.jpg" alt="Dit is een foto van een oud italiaans dorp huisje">
+                    <img src="./Assets/Images/denis-gorbuleac-3jXJz1kgraw-unsplash.jpg" alt="Dit is een foto van een oud italiaans dorp huisje">
                 </div>
             </div>
             <article>
@@ -134,6 +132,7 @@
                     </ul>
                 </div>
             </article>
+            <a href="#muziek" class="section_gaming_arrow_right">→</a>
         </section>
 
         <!-- Muziek -->
@@ -141,7 +140,7 @@
             <div class="muziek_left">
                 <h2>Muziek</h2>
                 <p>id="muziek"</p>
-                <img src="/Assets/Images/vinly.webp" alt="dit is een foto" id="vinlyPlayer">
+                <img src="./Assets/Images/vinly.webp" alt="dit is een foto" id="vinlyPlayer">
             </div>
             <article>
                 <div>
@@ -151,34 +150,27 @@
                 </div>
             </article>
         </section>
-    </main>
 
-    <audio src="" id="audio"></audio>
-
-    <section class="projecten_section" id="projecten">
+        <section class="projecten_section" id="projecten">
         <div>
             <h2>Projecten</h2>
             <p>id="projecten"</p>
         </div>
         <article class="projecten_article">
-            <div class="cards_projecten">
-                <img src="/Assets/Images/html_css_project.png" alt="Dit is een screenshot van mijn html-css workshop pagina">
-                <p>Deze pagina had ik gemaakt om mijn klasgenoten de basis van html en css te leren</p>
-                <a href="https://alperayik.github.io/HTML_CSS_Workshop/">Check mijn project</a>
+            <div>
+                <h2>Github</h2>
             </div>
-
-            <div class="cards_projecten">
-                <img src="/Assets/Images/bouw.jpg" alt="Dit is een foto van de bouw">
-                <p>Deze website/webapp ben ik nu aan het bouwen voor een klant het is een bouw/vergunning website</p>
+            <div>
+                <p>Op mijn github kan je mijn projecten bekijken.</p>
             </div>
-
-            <div class="cards_projecten">
-                <img src="/Assets/Images/streamdeck.jpeg" alt="Dit is een foto van een streamdeck">
-                <p>Vorig jaar bouwde ik een Stream Deck met een Arduino Uno R3, C++ en Python.</p>
-                <a href="https://github.com/AlperAyik/streamDeckDemo">Check mijn project</a>
+            <div>
+                <a href="https://github.com/AlperAyik">Github</a>
             </div>
         </article>
     </section>
+    </main>
+
+    <audio src="" id="audio"></audio>
     
     <!-- Footer -->
     <footer class="footer">
@@ -189,7 +181,7 @@
                     <p>Bedankt voor het bekijken van mijn pagina</p>
                 </div>
                 <div>
-                    © 2026 Alper Ayik — alle rechten voorbehouden
+                   <p>© 2026 Alper Ayik — alle rechten voorbehouden</p>
                 </div>
             </div>
             <div class="footer_section_right">
@@ -197,15 +189,12 @@
                     <h2>Navigatie</h2>
                 </div>
                 <div class="links_footer">
-                    <p><a href="#">Terug naar boven</a></p>
-                    <p><a href="#persoonlijk">Persoonlijk</a></p>
+                    <p><a href="#">Home</a></p>
+                    <p><a href="#muziek">Muziek</a></p>
                     <p><a href="#skills">Skills</a></p>
                     <p><a href="#gaming">Gaming</a></p>
-                    <p><a href="#muziek">Muziek</a></p>
+                    <p><a href="#persoonlijk">Persoonlijk</a></p>
                 </div>
-            </div>
-            <div>
-
             </div>
         </section>
     </footer>
