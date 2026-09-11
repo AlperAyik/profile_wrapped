@@ -2,74 +2,146 @@
 
 ## 📖 Over het project
 
-**Profile Wrapped** is mijn persoonlijke profielpagina. Op deze website kunnen bezoekers meer over mij te weten komen, zoals mijn **hobby's, skills, interesses en persoonlijkheid**.
+**Profile Wrapped** is mijn persoonlijke profielpagina. Op deze website kunnen bezoekers meer over mij te weten komen, zoals mijn **hobby's, skills, interesses en projecten**.
 
-De pagina is opgebouwd als een scrollbare website waarbij alle informatie verdeeld is over verschillende sections. Via de navbar kan de bezoeker ook direct naar een specifieke section navigeren.
+De website bestaat uit verschillende sections. Je kunt door de pagina scrollen of via de navbar direct naar een bepaalde section navigeren.
 
 ---
 
 ## 🧱 Pagina-opbouw
 
-De website bestaat uit de volgende onderdelen:
+De website bestaat uit:
 
-* **Navbar** – Navigatie naar de verschillende sections van de pagina.
-* **Hero** – Introductie van mijn profiel en mijn naam.
-* **5 Sections** – Verschillende onderdelen waarin ik meer over mezelf vertel.
+* **Navbar** – Navigatie naar de verschillende sections en mijn naam.
+* **Hero** – Introductie van mijn profiel.
+* **Persoonlijk** – Informatie over mijn hobby's en interesses.
+* **Skills** – Mijn belangrijkste programmeertalen en technieken.
+* **Gaming** – Mijn favoriete games.
+* **Muziek** – Muziek die ik leuk vind en interactieve muziekknoppen.
+* **Projecten** – Een aantal projecten die ik heb gemaakt.
 * **Footer** – Het afsluitende gedeelte van de pagina.
 
-De bezoeker kan de website op twee manieren bekijken:
-
-1. Door van boven naar beneden door de pagina te scrollen.
-2. Door via de links in de navbar direct naar een bepaalde section te gaan.
+Via de links in de navbar kan de bezoeker direct naar een section navigeren.
 
 ---
 
-## ✨ Animations & Interactions
+## ✨ Interacties & Animations
 
-Om de website interactiever en levendiger te maken, heb ik verschillende CSS-animations en hover-effects gebruikt.
+### Navbar
+
+Mijn naam in de navbar bestaat uit losse letters. Met JavaScript wordt steeds een andere letter voorzien van de CSS-animatie `bounce`, waardoor mijn naam steeds op een andere plek beweegt.
 
 ### Scroll Animation
 
-Wanneer je naar beneden scrollt, wordt de volgende section op een mooie manier zichtbaar. Hiervoor gebruik ik een animation die is gemaakt met **`@keyframes`**.
+De verschillende sections krijgen een **fade-in animation** wanneer ze tijdens het scrollen in beeld komen. Hiervoor gebruik ik CSS `@keyframes` en `animation-timeline`.
+
+Daarnaast gebruik ik **ScrollReveal** om de cards in de persoonlijke section één voor één vanaf de zijkant in beeld te laten komen.
 
 ### Hobby Cards
 
-In de **Hobby's-section** staan verschillende cards. Wanneer je met je muis over een card heen gaat, beweegt de card. Dit zorgt voor een interactieve **hover-effect**.
+De hobby cards hebben een hover-effect. Wanneer je over een card gaat, verschijnt er een **box-shadow** waardoor de card meer naar voren komt.
 
-### Naam & Navbar Animation
+### Skills afbeelding
 
-Mijn naam en de links boven in de navbar hebben een tweede animation. Deze elementen bewegen steeds een beetje **op en neer**, waardoor de navbar wat dynamischer wordt.
+Wanneer je met je muis over de afbeelding in de Skills-section gaat, wordt de afbeelding na een korte tijd recht gedraaid. Dit wordt met JavaScript geregeld.
 
----
+### Muziek
 
-## 🎨 Design
+In de muzieksection staan drie knoppen waarmee verschillende nummers kunnen worden afgespeeld.
 
-Bij het ontwerpen van de pagina heb ik aandacht besteed aan:
+Wanneer muziek wordt afgespeeld, draait de vinylplaat mee. Hiervoor gebruik ik JavaScript, `requestAnimationFrame()` en de HTML `<audio>`-element.
 
-* Een duidelijke en overzichtelijke layout
-* Een consistente kleurencombinatie
-* Een responsive design
-* Duidelijke navigatie
-* Interactieve elementen
-* CSS animations en transitions
+Wanneer de muziek wordt gepauzeerd, stopt ook de rotatie van de vinylplaat.
 
 ---
 
 ## 🛠️ Gebruikte technieken
 
+### HTML
+
 * HTML5
+* Semantische HTML
+* `<header>`
+* `<nav>`
+* `<main>`
+* `<section>`
+* `<article>`
+* `<footer>`
+* HTML `<audio>`
+* HTML `<progress>`
+
+### CSS
+
 * CSS3
+* Flexbox
+* CSS Grid
+* Responsive layout
 * CSS `@keyframes`
 * CSS Animations
 * CSS Transitions
-* Hover effects
-* Responsive Design
-* Flexbox / Grid
+* `:hover`
+* `animation-timeline`
+* `transform`
+* `box-shadow`
+
+### JavaScript
+
+JavaScript gebruik ik voor verschillende interactieve onderdelen van de website:
+
+* DOM-selectors
+* `querySelector()` en `querySelectorAll()`
+* Event listeners
+* `forEach()`
+* `setInterval()`
+* `clearInterval()`
+* `requestAnimationFrame()`
+* HTML Audio API
+* CSS classes toevoegen en verwijderen
+* CSS properties aanpassen vanuit JavaScript
+
+### Externe library
+
+Voor de animatie van de cards gebruik ik **ScrollReveal**.
+
+---
+
+## 🎨 Design
+
+Voor het ontwerp gebruik ik verschillende kleuren om de sections van elkaar te onderscheiden. De belangrijkste kleuren zijn onder andere:
+
+* Zwart
+* Gebroken wit
+* Oranje
+* Donkerrood
+* Geel
+* Roze
+
+Ik gebruik **Inter** als belangrijkste font.
+
+De website maakt gebruik van afgeronde hoeken, kaarten, afbeeldingen, transitions en animations om de pagina interactief te maken.
 
 ---
 
 ## 🎯 Doel van het project
 
-Het doel van **Profile Wrapped** is om mezelf op een creatieve manier voor te stellen en tegelijkertijd mijn kennis van **HTML en CSS** te laten zien.
+Het doel van **Profile Wrapped** is om mezelf op een creatieve manier voor te stellen aan docenten en medestudenten.
 
-Met dit project laat ik zien dat ik niet alleen een pagina kan opbouwen met HTML, maar deze ook interactief en visueel aantrekkelijk kan maken met CSS.
+Daarnaast gebruik ik dit project om mijn kennis van **HTML, CSS en JavaScript** toe te passen. Ik heb hierbij geleerd hoe ik een ontwerp kan omzetten naar een werkende webpagina en hoe ik met JavaScript interactieve elementen kan toevoegen.
+
+---
+
+## 📁 Projectstructuur
+
+```text
+profile_wrapped/
+│
+├── Assets/
+│   ├── Images/
+│   ├── Audio/
+│   └── Favicons/
+│
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+```

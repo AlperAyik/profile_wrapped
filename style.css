@@ -396,7 +396,7 @@ progress::-webkit-progress-bar {
 /* muziek */
 .section_muziek {
     background-color: #F1EFE8;
-    color: white;
+    color: black;
     padding: 2rem 5rem 2rem 5rem;
     gap: 10rem;
     display: flex;
@@ -409,4 +409,117 @@ progress::-webkit-progress-bar {
     
     border-radius: 20px;
     margin-top: 2rem;
+}
+
+.muziek_left img{
+    width: 25rem;
+    height: 25rem;
+}
+
+.section_muziek article {
+    background-color: #993C1D;
+    border-radius: 10px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25rem;
+}
+
+.section_muziek article div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+}
+
+.section_muziek article div button{
+    width: 250px;
+    height: 45px;
+    border: none;
+    border-radius: 20px;
+    background-color: #EF9F27;
+    color: white;
+    transition: background-color 0.3s ease-in;
+    cursor: pointer;
+}
+
+.section_muziek article div button:hover{
+    background-color: #bb7c1e;
+}
+
+.active {
+
+}
+
+/* projecten */
+.projecten_section {
+    background-color: #D85A30;
+    color: white;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    gap: 10rem;
+
+    animation: fadeIn 0.5s ease-in forwards;
+    animation-timeline: view();
+    animation-range: entry 5% cover 30%;
+
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+
+.projecten_article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+.projecten_article img{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 10px
+}
+
+.projecten_article div p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards_projecten a{
+    text-decoration: underline;
+    color: black;
+}
+
+.cards_projecten:nth-child(1) {
+    background-color: #FFFFFF;
+    color: black;
+    padding: 10px;
+    border-radius: 20px;
+    transition: box-shadow 0.5s ease-in;
+}
+
+.cards_projecten:nth-child(2) {
+    background-color: #FAC775;
+    padding: 10px;
+    border-radius: 20px;
+    transition: box-shadow 0.5s ease-in;
+}
+
+
+.cards_projecten:nth-child(3) {
+    background-color: #ED93B1;
+    padding: 10px;
+    border-radius: 20px;
+    transition: box-shadow 0.5s ease-in;
+}
+
+
+.projecten_article div:hover {
+    box-shadow: 0 10px 10px 5px rgb(0,0,0,0.5)
 }

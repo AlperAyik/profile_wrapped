@@ -31,6 +31,7 @@
                     <li><a href="#hobbys">Hobbys</a></li>
                     <li><a href="#gaming">Gaming</a></li>
                     <li><a href="#muziek">Muziek</a></li>
+                    <li><a href="#projecten">Projecten</a></li>
                 </ul>
             </div>
         </nav>
@@ -136,24 +137,47 @@
 
         <!-- Muziek -->
         <section class="section_muziek" id="muziek">
-            <div>
+            <div class="muziek_left">
                 <h2>Muziek</h2>
                 <p>id="muziek"</p>
-                <img src="" alt="dit is een foto">
+                <img src="/Assets/Images/vinly.webp" alt="dit is een foto" id="vinlyPlayer">
             </div>
             <article>
                 <div>
-                    <button>play - interstellar</button>
-                </div>
-                <div>
-                    <button>play - kara sevda</button>
-                </div>
-                <div>
-                    <button>play - last of us</button>
+                    <button class="muziekBtn">play - interstellar</button>
+                    <button class="muziekBtn">play - kara sevda</button>
+                    <button class="muziekBtn">play - last of us</button>
                 </div>
             </article>
         </section>
     </main>
+
+    <audio src="" id="audio"></audio>
+
+    <section class="projecten_section" id="projecten">
+        <div>
+            <h2>Projecten</h2>
+            <p>id="projecten"</p>
+        </div>
+        <article class="projecten_article">
+            <div class="cards_projecten">
+                <img src="/Assets/Images/html_css_project.png" alt="Dit is een screenshot van mijn html-css workshop pagina">
+                <p>Deze pagina had ik gemaakt om mijn klasgenoten de basis van html en css te leren</p>
+                <a href="https://alperayik.github.io/HTML_CSS_Workshop/">Check mijn project</a>
+            </div>
+
+            <div class="cards_projecten">
+                <img src="/Assets/Images/bouw.jpg" alt="Dit is een foto van de bouw">
+                <p>Deze website/webapp ben ik nu aan het bouwen voor een klant het is een bouw/vergunning website</p>
+            </div>
+
+            <div class="cards_projecten">
+                <img src="/Assets/Images/streamdeck.jpeg" alt="Dit is een foto van een streamdeck">
+                <p>Vorig jaar bouwde ik een Stream Deck met een Arduino Uno R3, C++ en Python.</p>
+                <a href="https://github.com/AlperAyik/streamDeckDemo">Check mijn project</a>
+            </div>
+        </article>
+    </section>
 
     <!-- Footer -->
     <footer>
