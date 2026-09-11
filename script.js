@@ -1,6 +1,5 @@
 // DOM
 const h2Nav =  document.querySelectorAll('.navbar_logo');
-const cards = document.querySelectorAll('.cards');
 const skillsImg = document.querySelector('.skills_img');
 const audio = document.getElementById('audio');
 const vinly = document.getElementById('vinlyPlayer');
@@ -13,9 +12,7 @@ let lastIndex = 0;
 let img_timer = 0;
 let rotation = 0;
 let stopped = false;
-
 const audios = ['/Assets/audio/Interstellar_alper.mp3', '/Assets/audio/KaraSevda_alper.mp3', '/Assets/audio/Last_of_us_alper.mp3']
-
 
 // muziek afspelen
 muziekBtns.forEach((btn, index) => {
@@ -45,23 +42,8 @@ function rotateVinly() {
     
     if(!stopped) {
         requestAnimationFrame(rotateVinly)
-    }
-    
+    } 
 }
-
-
-// cards inladen animation
-cards.forEach((card, index) => {
-    let slideUp = {
-        distance: '400%',
-        origin: 'left',
-        opacity: null,
-        delay: 500 * (index + 1),
-        reset: true,
-    };
-
-    ScrollReveal().reveal(card, slideUp);
-})
 
 // Img bewegen
 skillsImg.addEventListener('mouseover', () => {
