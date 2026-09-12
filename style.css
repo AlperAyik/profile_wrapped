@@ -1,4 +1,4 @@
-.inter-<uniquifier> {
+.inter-uniquifier {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
@@ -19,6 +19,7 @@ body {
 
 /* Animations */
 @keyframes bounce {
+
     0%,
     100% {
         transform: translateY(0);
@@ -29,32 +30,28 @@ body {
     }
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 @keyframes moveFromRight {
-    0% {
+    from {
         transform: translateX(100px);
         opacity: 0;
     }
 
-    100% {
+    to {
         transform: translateX(0);
         opacity: 1;
     }
 }
 
-.idSkills,
-.idPersoonlijk,
-.idIntro {
-    opacity: 60%;
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.5);
+    }
 }
 
 /* Header */
@@ -133,6 +130,10 @@ main {
     gap: 10rem;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+
+    animation: fadeOut 0.3s ease-in forwards;
+    animation-timeline: view();
+    animation-range: exit 0% exit 100%;
 }
 
 .section_hero h1 {
@@ -170,7 +171,6 @@ main {
 }
 
 /* Persoonlijk */
-
 .persoonlijk_section {
     background-color: #F1EFE8;
     color: white;
@@ -180,11 +180,15 @@ main {
     padding-bottom: 2rem;
     gap: 10rem;
     opacity: 0;
-    animation: fadeIn 0.5s ease-in forwards;
-    animation-timeline: view();
-    animation-range: entry 5% cover 30%;
+
+    animation: moveFromRight 0.5s ease-in forwards, fadeOut 0.3s ease-in forwards;
+    animation-timeline: view(), view();
+    animation-range: entry 5% cover 30%, exit 0% exit 100%;
+
     border-radius: 20px;
     margin-top: 2rem;
+
+    will-change: transform, opacity;
 }
 
 .persoonlijk_section div:nth-child(1) {
@@ -224,24 +228,7 @@ main {
     padding: 10px;
     transition: box-shadow 0.5s ease-in;
     border-radius: 20px;
-}
-
-.cards:nth-child(2) {
-    animation: moveFromRight 0.3s ease-in;
-    animation-timeline: view();
-    animation-range: entry 5% cover 20%;
-}
-
-.cards:nth-child(3) {
-    animation: moveFromRight 0.3s ease-in;
-    animation-timeline: view();
-    animation-range: entry 5% cover 30%;
-}
-
-.cards:nth-child(4) {
-    animation: moveFromRight 0.3s ease-in;
-    animation-timeline: view();
-    animation-range: entry 5% cover 40%;
+    cursor: default;
 }
 
 .persoonlijk_article a {
@@ -266,9 +253,11 @@ main {
     display: flex;
     justify-content: space-between;
     opacity: 0;
-    animation: fadeIn 0.5s ease-in forwards;
-    animation-timeline: view();
-    animation-range: entry 5% cover 30%;
+
+    animation: moveFromRight 0.5s ease-in forwards, fadeOut 0.3s ease-in forwards;
+    animation-timeline: view(), view();
+    animation-range: entry 5% cover 30%, exit 0% exit 100%;
+
     border-radius: 20px;
     margin-top: 2rem;
 }
@@ -286,12 +275,12 @@ main {
     height: 25rem;
     transform: rotate(30deg);
     transition: transform 0.3s ease-in-out;
+    
+    will-change: transform; 
 }
 
 .skills_img:hover {
     transform: rotate(0deg);
-
-    transition-delay: 2s
 }
 
 .msg_skills {
@@ -351,9 +340,9 @@ progress::-webkit-progress-bar {
     align-items: flex-end;
     opacity: 0;
 
-    animation: fadeIn 0.5s ease-in forwards;
-    animation-timeline: view();
-    animation-range: entry 5% cover 30%;
+    animation: moveFromRight 0.5s ease-in forwards, fadeOut 0.3s ease-in forwards;
+    animation-timeline: view(), view();
+    animation-range: entry 5% cover 30%, exit 0% exit 100%;
 
     border-radius: 20px;
     margin-top: 2rem;
@@ -368,7 +357,7 @@ progress::-webkit-progress-bar {
     display: block;
 }
 
-.section_gaming a{
+.section_gaming a {
     position: absolute;
     text-decoration: none;
     color: white;
@@ -416,9 +405,11 @@ progress::-webkit-progress-bar {
     justify-content: space-between;
     align-items: flex-end;
     opacity: 0;
-    animation: fadeIn 0.5s ease-in forwards;
-    animation-timeline: view();
-    animation-range: entry 5% cover 30%;
+
+    animation: moveFromRight 0.5s ease-in forwards, fadeOut 0.3s ease-in forwards;
+    animation-timeline: view(), view();
+    animation-range: entry 5% cover 30%, exit 0% exit 100%;
+
     border-radius: 20px;
     margin-top: 2rem;
 }
@@ -469,9 +460,11 @@ progress::-webkit-progress-bar {
     padding-bottom: 2rem;
     gap: 10rem;
     opacity: 0;
-    animation: fadeIn 0.5s ease-in forwards;
-    animation-timeline: view();
-    animation-range: entry 5% cover 30%;
+
+    animation: moveFromRight 0.5s ease-in forwards, fadeOut 0.3s ease-in forwards;
+    animation-timeline: view(), view();
+    animation-range: entry 5% cover 30%, exit 0% exit 100%;
+
     border-radius: 20px;
     margin-top: 2rem;
 }
@@ -541,7 +534,7 @@ progress::-webkit-progress-bar {
     gap: 5px;
 }
 
-.links_footer p a{
+.links_footer p a {
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.3s ease-in;
 }
@@ -931,4 +924,20 @@ progress::-webkit-progress-bar {
     .links_footer {
         grid-template-columns: 1fr;
     }
+}
+
+.persoonlijk_section,
+.skills_section,
+.section_gaming,
+.section_muziek {
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0); /* Forceert 3D/GPU rendering */
+}
+
+.persoonlijk_section,
+.skills_section,
+.section_gaming,
+.section_muziek {
+    content-visibility: auto;
+    contain-intrinsic-size: 500px; /* Een geschatte hoogte zodat je scrollbar niet springt */
 }

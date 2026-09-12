@@ -19,15 +19,26 @@ const audios = ['/Assets/audio/Interstellar_alper.mp3', '/Assets/audio/KaraSevda
 muziekBtns.forEach((btn, index) => {
     let playing = false
     let savedTime = 0;
+    
     btn.addEventListener('click', () => {
+        muziekBtns.forEach((songbtn) => {
+            songbtn.disabled = true
+        })
         if (playing) {
             audio.pause();
             savedTime = audio.currentTime
+
             playing = false;
             stopped = true;
+
+            muziekBtns.forEach((songbtn) => {
+                songbtn.disabled = false
+            })
         } else {
             playing = true;
             stopped = false;
+
+            btn.disabled = false
             
             audio.src = audios[index];
             if(savedTime > 0) {
@@ -39,6 +50,8 @@ muziekBtns.forEach((btn, index) => {
         }
     });
 });
+
+// Maak active class voor button
 
 audio.addEventListener('ended', () => {
     playing = false;
@@ -56,7 +69,6 @@ function rotateVinly() {
     if(!stopped) {
         requestAnimationFrame(rotateVinly)
     }
-    
 }
 
 // Img bewegen
