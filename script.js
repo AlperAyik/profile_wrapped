@@ -1,19 +1,25 @@
 // DOM
 const h2Nav =  document.querySelectorAll('.navbar_logo');
-const skillsImg = document.querySelector('.skills_img');
 const audio = document.getElementById('audio');
 const vinly = document.getElementById('vinlyPlayer');
 const muziekBtns = document.querySelectorAll('.muziekBtn');
+const recepten = document.querySelectorAll('.recept_div');
+const recept_tag = document.querySelectorAll('.recept_tag');
 
 // variables
-let interval = '';
 let timer = 0;
 let lastIndex = 0;
-let img_timer = 0;
 let rotation = 0;
 let stopped = false;
+const audios = ['./Assets/audio/Interstellar_alper.mp3', './Assets/audio/KaraSevda_alper.mp3', './Assets/audio/Last_of_us_alper.mp3'];
 
-const audios = ['./Assets/audio/Interstellar_alper.mp3', './Assets/audio/KaraSevda_alper.mp3', './Assets/audio/Last_of_us_alper.mp3']
+
+// recepten drop down
+recept_tag.forEach((recept, index) => {
+    recept.addEventListener('click', () => {
+        recepten[index].classList.toggle('open')
+    })
+})
 
 // muziek afspelen
 muziekBtns.forEach((btn, index) => {
@@ -70,27 +76,6 @@ function rotateVinly() {
         requestAnimationFrame(rotateVinly)
     }
 }
-
-// Img bewegen
-skillsImg.addEventListener('mouseover', () => {
-    clearInterval(interval);
-    img_timer = 0;
-
-    interval = setInterval(() => {
-        if(img_timer < 2) {
-            img_timer++;
-        } else {
-            clearInterval(interval);
-            skillsImg.style.transform = 'rotate(0deg)';
-        }
-    }, 1000)
-})
-
-skillsImg.addEventListener('mouseout', () => {
-    img_timer = 0;
-    clearInterval(interval);
-})
-
 
 // Logo naam
 setInterval(() => {
