@@ -13,7 +13,7 @@ let img_timer = 0;
 let rotation = 0;
 let stopped = false;
 
-const audios = ['/Assets/audio/Interstellar_alper.mp3', '/Assets/audio/KaraSevda_alper.mp3', '/Assets/audio/Last_of_us_alper.mp3']
+const audios = ['./Assets/audio/Interstellar_alper.mp3', './Assets/audio/KaraSevda_alper.mp3', './Assets/audio/Last_of_us_alper.mp3']
 
 // muziek afspelen
 muziekBtns.forEach((btn, index) => {

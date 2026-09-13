@@ -124,7 +124,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url("/Assets/Images/anita-austvika-OsfRsL4RhTk-unsplash.jpg");
+    background-image: url("./Assets/Images/anita-austvika-OsfRsL4RhTk-unsplash.jpg");
     color: white;
     padding: 5rem;
     gap: 10rem;
@@ -158,6 +158,11 @@ main {
     width: 170px;
     height: 46px;
     background-color: #EF9F27;
+    transition: background-color 0.3s ease-in;
+}
+
+.section_hero_left a:hover {
+    background-color: #d38d23;
 }
 
 .section_hero_right {
@@ -226,7 +231,7 @@ main {
 .cards {
     background-color: #993C1D;
     padding: 10px;
-    transition: box-shadow 0.5s ease-in;
+    transition: box-shadow 0.2s ease-in;
     border-radius: 20px;
     cursor: default;
 }
@@ -234,6 +239,15 @@ main {
 .persoonlijk_article a {
     text-decoration: none;
     color: black;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #993C1D;
+    color: white;
+    transition: background-color 0.3s ease-in;
+}
+
+.persoonlijk_article a:hover {
+    background-color: #D85A30;
 }
 
 .persoonlijk_article div:hover {
@@ -297,11 +311,28 @@ main {
 }
 
 .skills_navbtns:last-child {
-    padding-bottom: 5rem;
+    text-decoration: none;
+    color: black;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #993C1D;
+    color: white;
+    transition: background-color 0.3s ease-in;
 }
 
 .skills_navbtns:first-child {
+    text-decoration: none;
+    color: black;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #993C1D;
+    color: white;
+    transition: background-color 0.3s ease-in;
     margin-top: 25rem;
+}
+
+.skills_navbtns:hover {
+    background-color: #D85A30;
 }
 
 progress {
@@ -328,16 +359,13 @@ progress::-webkit-progress-bar {
     background-color: #D4537E;
 }
 
-/* Gaming */
+/* recepten */
 
-.section_gaming {
+.section_recepten {
     background-color: #4A1B0C;
     color: white;
     padding: 2rem 5rem 2rem 5rem;
     gap: 10rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
     opacity: 0;
 
     animation: moveFromRight 0.5s ease-in forwards, fadeOut 0.3s ease-in forwards;
@@ -348,48 +376,33 @@ progress::-webkit-progress-bar {
     margin-top: 2rem;
 }
 
-.section_gaming img {
+.section_recepten img {
     border-radius: 10px;
-    box-shadow: 30px 10px 30px 20px rgba(0, 0, 0, 0.5);
     width: 20rem;
     height: 25rem;
     object-fit: cover;
     display: block;
 }
 
-.section_gaming a {
-    position: absolute;
-    text-decoration: none;
-    color: white;
-}
-
-.section_gaming_arrow_left {
-    padding-left: 28.5rem;
-}
-
-.section_gaming_arrow_right {
-    margin-left: 66rem;
-}
-
-.section_gaming article {
-    background-color: #993C1D;
-    width: 90%;
-    height: 25rem;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-
-.section_gaming article div {
-    width: 90%;
-    padding-top: 1rem;
-}
-
-.section_gaming article div p {
+.section_recepten article {
     display: flex;
-    padding-left: 2.5rem;
+    justify-content: space-between;
+    width: 100%;
+    
 }
 
-.section_gaming article div ul li {
+.section_recepten article div {
+    background-color: #D85A30;
+    padding: 1rem;
+    border-radius: 10px;
+        box-shadow: 30px 10px 30px 20px rgba(0, 0, 0, 0.5);
+}
+
+.section_recepten article div p {
+    padding-left: 1.3rem;
+}
+
+.section_recepten article div ul li {
     list-style: none;
     padding-bottom: 2rem;
     opacity: 60%;
