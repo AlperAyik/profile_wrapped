@@ -19,6 +19,7 @@ muziekBtns.forEach((btn, index) => {
     btn.addEventListener('click', () => {
         muziekBtns.forEach((songbtn) => {
             songbtn.disabled = true
+            songbtn.style.backgroundColor = '#EF9F27'
         })
         if (playing) {
             audio.pause();
@@ -34,6 +35,7 @@ muziekBtns.forEach((btn, index) => {
             playing = true;
             stopped = false;
 
+            btn.style.backgroundColor = '#573a0e'
             btn.disabled = false
             
             audio.src = audios[index];
@@ -46,8 +48,6 @@ muziekBtns.forEach((btn, index) => {
         }
     });
 });
-
-// Maak active class voor button
 
 audio.addEventListener('ended', () => {
     playing = false;
