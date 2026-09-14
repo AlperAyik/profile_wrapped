@@ -16,9 +16,9 @@ De website bestaat uit:
 * **Hero** – Introductie van mijn profiel.
 * **Persoonlijk** – Informatie over mijn hobby's en interesses.
 * **Skills** – Mijn belangrijkste programmeertalen en technieken.
-* **Gaming** – Mijn favoriete games.
+* **Recepten** – Mijn favoriete recepten.
 * **Muziek** – Muziek die ik leuk vind en interactieve muziekknoppen.
-* **Projecten** – Een aantal projecten die ik heb gemaakt.
+* **Projecten** – Een link naar mijn GitHub-pagina waar mijn projecten te vinden zijn.
 * **Footer** – Het afsluitende gedeelte van de pagina.
 
 Via de links in de navbar kan de bezoeker direct naar een section navigeren.
@@ -35,23 +35,27 @@ Mijn naam in de navbar bestaat uit losse letters. Met JavaScript wordt steeds ee
 
 De verschillende sections krijgen een **fade-in animation** wanneer ze tijdens het scrollen in beeld komen. Hiervoor gebruik ik CSS `@keyframes` en `animation-timeline`.
 
-Daarnaast gebruik ik **ScrollReveal** om de cards in de persoonlijke section één voor één vanaf de zijkant in beeld te laten komen.
-
 ### Hobby Cards
 
 De hobby cards hebben een hover-effect. Wanneer je over een card gaat, verschijnt er een **box-shadow** waardoor de card meer naar voren komt.
 
 ### Skills afbeelding
 
-Wanneer je met je muis over de afbeelding in de Skills-section gaat, wordt de afbeelding na een korte tijd recht gedraaid. Dit wordt met JavaScript geregeld.
+Wanneer je met je muis over de afbeelding in de Skills-section gaat, begint de afbeelding te **trillen**. Dit zorgt voor een interactieve reactie wanneer de gebruiker over de afbeelding hovert.
 
 ### Muziek
 
 In de muzieksection staan drie knoppen waarmee verschillende nummers kunnen worden afgespeeld.
 
-Wanneer muziek wordt afgespeeld, draait de vinylplaat mee. Hiervoor gebruik ik JavaScript, `requestAnimationFrame()` en de HTML `<audio>`-element.
+Wanneer een nummer wordt gekozen en afgespeeld, begint de **vinylplaat te draaien**. Hiervoor gebruik ik JavaScript, `requestAnimationFrame()` en het HTML `<audio>`-element.
 
 Wanneer de muziek wordt gepauzeerd, stopt ook de rotatie van de vinylplaat.
+
+Daarnaast kan de bezoeker naar **één van mijn eigen gespeelde nummers** luisteren.
+
+### Projecten
+
+In de Projecten-section kan de bezoeker via een link naar mijn **GitHub-pagina** gaan. Hier zijn mijn verschillende projecten te bekijken.
 
 ---
 
@@ -99,10 +103,6 @@ JavaScript gebruik ik voor verschillende interactieve onderdelen van de website:
 * CSS classes toevoegen en verwijderen
 * CSS properties aanpassen vanuit JavaScript
 
-### Externe library
-
-Voor de animatie van de cards gebruik ik **ScrollReveal**.
-
 ---
 
 ## 🎨 Design
@@ -134,6 +134,7 @@ Daarnaast gebruik ik dit project om mijn kennis van **HTML, CSS en JavaScript** 
 
 ```text
 profile_wrapped/
+
 │
 ├── Assets/
 │   ├── Images/

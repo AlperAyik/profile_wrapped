@@ -310,7 +310,11 @@ main {
 .article_skills_progress {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 0;
+    gap: 2rem;
+}
+
+.skills_text {
+    margin-top: 3rem;
 }
 
 .skills_img {
@@ -330,9 +334,9 @@ main {
 progress {
     border-radius: 20px;
     overflow: hidden;
-    width: 500px;
-    max-width: 600px;
-    height: 10px;
+    width: 900px;
+    max-width: 1000px;
+    height: 20px;
 }
 
 progress::-webkit-progress-bar {
@@ -454,6 +458,7 @@ progress::-webkit-progress-bar {
 .section_muziek article div button:hover {
     background-color: #bb7c1e;
 }
+
 /* Projecten */
 
 .projecten_section {
