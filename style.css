@@ -307,6 +307,11 @@ main {
     margin-top: 2rem;
 }
 
+.skills_section article {
+    width: 90%;
+    margin: 0 auto;
+}
+
 .article_skills_progress {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -334,8 +339,7 @@ main {
 progress {
     border-radius: 20px;
     overflow: hidden;
-    width: 900px;
-    max-width: 1000px;
+    width: 90%;
     height: 20px;
 }
 
@@ -382,8 +386,7 @@ progress::-webkit-progress-bar {
 .section_recepten article {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-
+    gap: 1rem;
 }
 
 .section_recepten article div {
@@ -490,9 +493,7 @@ progress::-webkit-progress-bar {
 }
 
 .projecten_article div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     padding: 10px;
     color: black;
 }
